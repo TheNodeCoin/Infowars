@@ -605,15 +605,57 @@ bool core::update_miner_block_template() {
 
 bool core::on_idle() {
   if (!m_starter_message_showed) {
-    logger(INFO) << ENDL << "**********************************************************************" << ENDL
-      << "The daemon will start synchronizing with the network. It may take up to several hours." << ENDL
+    logger(INFO) << ENDL << "**********************************************************************" << ENDL                                                                                     
+<<"      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM      " << ENDL
+<<"      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM       " << ENDL
+<<"      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM       " << ENDL
+<<"      MMMM                                                           MMMM       " << ENDL
+<<"      MMMM                                                           MMMM       " << ENDL
+<<"      MMMM                                                           MMMM       " << ENDL
+<<"      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM       " << ENDL
+<<"      MMMMM ...MO ..:MMMMMMMM7...,M ..........~MMMMMM    .. MMMMMMMMMMMMM       " << ENDL
+<<"      MMMMM    N     .MMMMMMM    .M            MMM .          .MMMMMMMMMM       " << ENDL
+<<"      MMMMM    N      .MMMMMM    .M            M.               .MMMMMMMM       " << ENDL
+<<"      MMMMM    N       .MMMMM    .M    MMMMMMMM     .MMMMMMM      MMMMMMM       " << ENDL
+<<"      MMMMM    N        .MMMM    .M    MMMMMMM     MMMMMMMMMMM     MMMMMM       " << ENDL
+<<"      MMMMM    N     .   .MMM    .M    MMMMMM.    MMMMMMMMMMMMM.    MMMMM       " << ENDL
+<<"      MMMMM    N     M     MM    .M              .MMMMMMMMMMMMM+   .MMMMM       " << ENDL
+<<"      MMMMM    N     MM.    M    .M              ~MMMMMMMMMMMMM?   .MMMMM       " << ENDL
+<<"      MMMMM    N     MMM.    .   .M   .MMMMMM     MMMMMMMMMMMMM.    MMMMM       " << ENDL
+<<"      MMMMM    N     MMMM.       .M    MMMMMMM     MMMMMMMMMMM     MMMMMM       " << ENDL
+<<"      MMMMM    N     MMMMM.      .M    MMMMMMM7    .MMMMMMMMM.    ~MMMMMM       " << ENDL
+<<"      MMMMM    N     MMMMMM..    .M    MMMMMMMM$        :        =MMMMMMM       " << ENDL
+<<"      MMMMM    N     MMMMMMM     .M    MMMMMMMMMM..           . MMMMMMMMM       " << ENDL
+<<"      MMMMM    N    .MMMMMMMM..  .M   .MMMMMMMMMMMMM..    . .MMMMMMMMMMMM       " << ENDL
+<<"      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM8OOOOOMMMMMMMMMMMI 7MMMMMMMMMM       " << ENDL
+<<"      MMMMM  MMMMMMMMM   MMMMMMMMM   M.  M:          .$MM.   ..   MMMMMMM       " << ENDL
+<<"      MMMMM  MMMMMMMM.   MMMMMMMM.  M..  M: .MMMMMMM?   . .MMMMM   MMMMMM       " << ENDL
+<<"      MMMMM  MMMMMMM~    MMMMMMM. .M     M:  MMMMMMMMM    MMMMMMM  $MMMMM       " << ENDL
+<<"      MMMMM  MMMMMMI .D  MMMMMM. .M.  M  M:  MMMMMMMMM:  .MMMMMMMMMMMMMMM       " << ENDL
+<<"      MMMMM  MMMMMZ  +M  MMMMM.  M.. MM  M:  MMMMMMMMM    . MMMMMMMMMMMMM       " << ENDL
+<<"      MMMMM  MMMMM.  MM  MMMM   M:  NMM  M:  MMMMMMMM?. :     ..ZMMMMMMMM       " << ENDL
+<<"      MMMMM  MMMM.  MMM  MMM  .M+  OMMM  M:  MMN::,.   IMMMMM:     MMMMMM       " << ENDL
+<<"      MMMMM  MMM. .MMMM  MM  .M$  ?MMMM. M:  MMN   . MMMMMMMMMMMN. .MMMMM       " << ENDL
+<<"      MMMMM  MM  .MMMMM  M  .MN.         M:  MMMM.  MMM$7MMMMMMMM  .MMMMM       " << ENDL
+<<"      MMMMM  M  .MMMMMM  ?. ZM  .MMMMMM  M:  MMMMM   MM  .MMMMMMM  .MMMMM       " << ENDL
+<<"      MMMMM    .MMMMMMM    7M  .MMMMMMM  M:  MMMMMM.  O7.  MMMMM.. MMMMMM       " << ENDL
+<<"      MMMMM   .MMMMMMMM    M.  MMMMMMMM  M:  MMMMMMM$   M.       .MMMMMMM       " << ENDL
+<<"      MMMMM??+MMMMMMMMM??$MI?+MMMMMMMMM??MM??MMMMMMMMM??MMM$.. 8MMMMMMMMM       " << ENDL
+<<"      MMMM                                                           MMMM       " << ENDL
+<<"      MMMM                                                           MMMM       " << ENDL
+<<"      MMMM                                                           MMMM       " << ENDL
+<<"      MMMM                                                           MMMM       " << ENDL
+<<"      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM " << ENDL      
+<<"      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM " << ENDL
+      << ENDL                                               
+      << "The InfoWars network is synchronizing. It may take up to several hours." << ENDL
       << ENDL
-      << "You can set the level of process detailization* through \"set_log <level>\" command*, where <level> is between 0 (no details) and 4 (very verbose)." << ENDL
+      << "You can change the infowar view by \"set_log <level>\" command*, where <level> is between 0 (no details) and 4 (very verbose)." << ENDL
       << ENDL
       << "Use \"help\" command to see the list of available commands." << ENDL
       << ENDL
       << "Note: in case you need to interrupt the process, use \"exit\" command. Otherwise, the current progress won't be saved." << ENDL
-      << "**********************************************************************";
+      << "*******THERE'S***A***WAR***ON***FOR***YOUR***MIND***AND***CASH*******";
     m_starter_message_showed = true;
   }
 
